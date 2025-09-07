@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AyvirAcademias - Academia de Idiomas Online</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #ffffff;
+      color: #333;
+    }
+    /* ===== HEADER ===== */
+    header {
+      background-color: #fff;
+      color: #8e44ad;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 40px;
+      text-align: left;
+    }
+    header img {
+      max-height: 90px;
+      margin-right: 20px;
+    }
+    header .title-block h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      color: #8e44ad;
+    }
+    header .title-block p {
+      font-size: 1.3rem;
+      margin: 5px 0 0;
+      color: #8e44ad;
+      font-weight: bold;
+    }
+    header .title-block span {
+      text-transform: uppercase;
+      font-weight: bold;
+      opacity: 0.8; /* transparencia */
+    }
+    /* ===== NAV ===== */
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #9b59b6; /* malva más claro */
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+    nav a:hover {
+      background-color: rgba(155, 89, 182, 0.8);
+    }
+    /* ===== SECCIONES ===== */
+    section {
+      padding: 50px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h2 {
+      color: #8e44ad;
+      margin-bottom: 25px;
+      font-size: 1.8rem;
+      text-align: center;
+    }
+    h3 {
+      color: #27ae60;
+      margin-bottom: 10px;
+    }
+    p strong {
+      color: #8e44ad;
+    }
+    /* ===== GRID ===== */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 25px;
+    }
+    .card {
+      border: 1px solid #eee;
+      padding: 20px;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      max-width: 80%;
+      display: block;
+      margin: 15px auto 0;
+      border-radius: 10px;
+    }
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #9b59b6;
+      color: white;
+    }
+    footer img {
+      max-height: 40px;
+      display: block;
+      margin: 10px auto;
+    }
+    .contact-info {
+      font-size: 18px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <img src="images/logo.jpg" alt="Logo AyvirAcademias">
+    <div class="title-block">
+      <h1>AyvirAcademias</h1>
+      <p>Aprende idiomas <span>ONLINE</span> de manera flexible y <strong>efectiva</strong></p>
+    </div>
+  </header>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#cursos">Cursos</a>
+    <a href="#examenes">Exámenes Oficiales</a>
+    <a href="#ninos">Niños y Adolescentes</a>
+    <a href="#adultos">Adultos</a>
+    <a href="#empresas">Empresas y Colegios</a>
+    <a href="#campamentos">Campamentos</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <!-- CURSOS -->
+  <section id="cursos">
+    <h2>Cursos</h2>
+    <p style="text-align:center; opacity:0.9;"><strong>Clases ONLINE</strong> flexibles para todas las edades: desde infantil hasta adultos.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Inglés</h3>
+        <p>Clases individuales y grupales para todos los niveles, adaptadas a tu horario.</p>
+        <img src="images/ingles.jpg" alt="Clase de inglés online">
+      </div>
+      <div class="card">
+        <h3>Español</h3>
+        <p>Aprende español de manera divertida, desde nivel infantil hasta adultos.</p>
+        <img src="images/espanol.jpg" alt="Clase de español online">
+      </div>
+      <div class="card">
+        <h3>Alemán</h3>
+        <p>Curso online intensivo y regular para todos los niveles y edades.</p>
+        <img src="images/aleman.jpg" alt="Clase de alemán online">
+      </div>
+      <div class="card">
+        <h3>Francés</h3>
+        <p>Clases online adaptadas a tus necesidades, individuales y grupales.</p>
+        <img src="images/frances.jpg" alt="Clase de francés online">
+      </div>
+    </div>
+  </section>
+
+  <!-- EXÁMENES -->
+  <section id="examenes">
+    <h2>Exámenes Oficiales</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Cambridge English</h3>
+        <ul>
+          <li>PET (B1)</li>
+          <li>FCE (B2)</li>
+          <li>CAE (C1)</li>
+          <li>CPE (C2)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Otros Exámenes</h3>
+        <ul>
+          <li>DELE (Español)</li>
+          <li>Goethe-Zertifikat (Alemán)</li>
+          <li>DELF/DALF (Francés)</li>
+          <li>Trinity</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- NIÑOS -->
+  <section id="ninos">
+    <h2>Niños y Adolescentes</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Cursos Generales en Grupo</h3>
+        <p><strong>Objetivo:</strong> desarrollar el interés por el idioma y las competencias orales y escritas. Máx. 5 alumnos.</p>
+      </div>
+      <div class="card">
+        <h3>Tutorías Individuales</h3>
+        <p>Horario y formato <strong>flexible</strong>.</p>
+      </div>
+      <div class="card">
+        <h3>Clases de Apoyo Escolar Bilingüe</h3>
+        <p>Primaria, Secundaria y Bachillerato.</p>
+      </div>
+      <div class="card">
+        <h3>Cursos Intensivos de Verano (20h)</h3>
+        <p>Preparación de recuperaciones.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADULTOS -->
+  <section id="adultos">
+    <h2>Adultos</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Cursos Generales o Intensivos</h3>
+        <p>Objetivo: adquirir y mejorar el nivel en las cuatro destrezas del idioma. <br>Niveles: A1, A2, B1, B2, C1, C2.</p>
+      </div>
+      <div class="card">
+        <h3>Cursos de Inmersión (3-5 días)</h3>
+        <p><strong>Objetivo:</strong> consolidar competencias orales y auditivas con programas intensivos en España.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EMPRESAS -->
+  <section id="empresas">
+    <h2>Empresas y Colegios</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Cursos Ad Hoc</h3>
+        <p>Cursos personalizados para empresas o centros educativos.</p>
+      </div>
+      <div class="card">
+        <h3>Cursos Regulares</h3>
+        <p>Adaptados al calendario académico.</p>
+      </div>
+      <div class="card">
+        <h3>Clases Individuales</h3>
+        <p>En el centro o vía Skype.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAMPAMENTOS -->
+  <section id="campamentos">
+    <h2>Campamentos de Verano</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Urbanos (7-12 años)</h3>
+        <p>100% en inglés. Refuerzo de asignaturas bilingües (ciencias naturales y sociales) y actividades colectivas de tiempo libre.</p>
+      </div>
+      <div class="card">
+        <h3>En el Extranjero (12-17 años)</h3>
+        <p>Aprendizaje del idioma en un ambiente de inmersión lingüística total, con desarrollo de la comprensión oral y escrita diaria.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p class="contact-info">Teléfono: <a href="tel:630464497">630 464 497</a></p>
+    <p class="contact-info">Email: info@ayviracademias.com</p>
+    <img src="images/logo.jpg" alt="Logo pequeño AyvirAcademias">
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 AyvirAcademias. Todos los derechos reservados.</p>
+    <img src="images/logo.jpg" alt="Logo AyvirAcademias pequeño">
+  </footer>
+</body>
+</html>
