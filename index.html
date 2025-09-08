@@ -40,11 +40,6 @@
       color: #8e44ad;
       font-weight: bold;
     }
-    header .title-block span {
-      text-transform: uppercase;
-      font-weight: bold;
-      opacity: 0.8;
-    }
 
     /* ===== NAV ===== */
     nav {
@@ -66,14 +61,20 @@
 
     /* ===== SECCIONES ===== */
     section {
-      padding: 40px 15px;
+      padding: 50px 20px;
       max-width: 1100px;
       margin: auto;
+    }
+    section:nth-child(even) {
+      background-color: #faf6fc;
+    }
+    section:nth-child(odd) {
+      background-color: #ffffff;
     }
     h2 {
       color: #8e44ad;
       margin-bottom: 20px;
-      font-size: 1.6rem;
+      font-size: 1.8rem;
       text-align: center;
     }
     h3 {
@@ -82,6 +83,24 @@
     }
     p strong {
       color: #8e44ad;
+    }
+
+    /* ===== MÉTODO ===== */
+    .metodo-text {
+      text-align: center;
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+    .metodo-text span {
+      color: #e67e22;
+      font-weight: bold;
+    }
+    .metodo-highlight {
+      color: #8e44ad;
+      font-weight: bold;
+      font-size: 1.2rem;
     }
 
     /* ===== GRID ===== */
@@ -156,11 +175,9 @@
   <!-- NAV -->
   <nav>
     <a href="#metodo">Método</a>
+    <a href="#idiomas">Idiomas</a>
     <a href="#cursos">Cursos</a>
     <a href="#examenes">Exámenes Oficiales</a>
-    <a href="#ninos">Niños y Adolescentes</a>
-    <a href="#adultos">Adultos</a>
-    <a href="#empresas">Empresas y Colegios</a>
     <a href="#campamentos">Campamentos</a>
     <a href="#contacto">Contacto</a>
   </nav>
@@ -168,17 +185,16 @@
   <!-- MÉTODO -->
   <section id="metodo">
     <h2>El Método Ayvir</h2>
-    <p style="text-align:center; max-width:800px; margin:auto; opacity:0.9;">
-      <strong>EL MÉTODO AYVIR</strong> consigue que nuestros alumnos se sientan motivados desde el primer día:
-      Desarrollan capacidades creativas con las que aprenden con seguridad el idioma de su elección.
-      Enseñanza mediante técnicas de razonamiento basadas en la lógica, más allá de las habituales reglas
-      gramaticales y de memorización.
+    <p class="metodo-text">
+      <span class="metodo-highlight">EL MÉTODO AYVIR</span> consigue que nuestros alumnos se sientan <span>motivados desde el primer día</span>.<br>
+      Desarrollan <span>capacidades creativas</span> con las que aprenden con <strong>seguridad</strong> el idioma de su elección.<br>
+      Enseñanza mediante <span>técnicas de razonamiento lógico</span>, más allá de las habituales reglas gramaticales y de memorización.
     </p>
   </section>
 
-  <!-- CURSOS -->
-  <section id="cursos">
-    <h2>Cursos</h2>
+  <!-- IDIOMAS -->
+  <section id="idiomas">
+    <h2>Idiomas</h2>
     <p style="text-align:center; opacity:0.9;">
       <strong>Clases ONLINE</strong> flexibles para todas las edades: desde infantil hasta adultos.
     </p>
@@ -202,6 +218,43 @@
         <h3>Francés</h3>
         <p>Clases online adaptadas a tus necesidades, individuales y grupales.</p>
         <img src="images/frances.jpg" alt="Clase de francés online">
+      </div>
+    </div>
+  </section>
+
+  <!-- CURSOS -->
+  <section id="cursos">
+    <h2>Cursos</h2>
+    <p style="text-align:center; opacity:0.9;">
+      Ofrecemos <strong>clases particulares</strong> y <strong>grupales</strong> para todas las edades y necesidades.
+    </p>
+    <div class="grid">
+      <div class="card">
+        <h3>Clases Particulares</h3>
+        <img src="images/particulares.jpg" alt="Clases particulares">
+      </div>
+      <div class="card">
+        <h3>Clases Grupales</h3>
+        <img src="images/grupales.jpg" alt="Clases grupales">
+      </div>
+    </div>
+
+    <div class="grid" style="margin-top:30px;">
+      <div class="card">
+        <h3>Niños y Adolescentes</h3>
+        <p>Desarrollan interés y competencias orales y escritas en grupos reducidos o tutorías individuales.</p>
+        <img src="images/ninos_adolescentes.jpg" alt="Clases para niños y adolescentes">
+      </div>
+      <div class="card">
+        <h3>Adultos</h3>
+        <p>Cursos generales e intensivos en todos los niveles. También programas de inmersión en España.</p>
+        <img src="images/adultos.jpg" alt="Clases para adultos">
+      </div>
+      <div class="card">
+        <h3>Empresas y Colegios</h3>
+        <p>Programas especializados y personalizados con un <strong>altísimo porcentaje de éxito en exámenes oficiales</strong>.  
+        Adaptados a calendario académico o necesidades corporativas.</p>
+        <img src="images/empresas_colegios.jpg" alt="Cursos para empresas y colegios">
       </div>
     </div>
   </section>
@@ -231,74 +284,19 @@
     </div>
   </section>
 
-  <!-- NIÑOS -->
-  <section id="ninos">
-    <h2>Niños y Adolescentes</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Cursos Generales en Grupo</h3>
-        <p><strong>Objetivo:</strong> desarrollar el interés por el idioma y las competencias orales y escritas. Máx. 5 alumnos.</p>
-      </div>
-      <div class="card">
-        <h3>Tutorías Individuales</h3>
-        <p>Horario y formato <strong>flexible</strong>.</p>
-      </div>
-      <div class="card">
-        <h3>Clases de Apoyo Escolar Bilingüe</h3>
-        <p>Primaria, Secundaria y Bachillerato.</p>
-      </div>
-      <div class="card">
-        <h3>Cursos Intensivos de Verano (20h)</h3>
-        <p>Preparación de recuperaciones.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ADULTOS -->
-  <section id="adultos">
-    <h2>Adultos</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Cursos Generales o Intensivos</h3>
-        <p>Objetivo: adquirir y mejorar el nivel en las cuatro destrezas del idioma. <br>Niveles: A1, A2, B1, B2, C1, C2.</p>
-      </div>
-      <div class="card">
-        <h3>Cursos de Inmersión (3-5 días)</h3>
-        <p><strong>Objetivo:</strong> consolidar competencias orales y auditivas con programas intensivos en España.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- EMPRESAS -->
-  <section id="empresas">
-    <h2>Empresas y Colegios</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Cursos Ad Hoc</h3>
-        <p>Cursos personalizados para empresas o centros educativos.</p>
-      </div>
-      <div class="card">
-        <h3>Cursos Regulares</h3>
-        <p>Adaptados al calendario académico.</p>
-      </div>
-      <div class="card">
-        <h3>Clases Individuales</h3>
-        <p>En el centro o vía Skype.</p>
-      </div>
-    </div>
-  </section>
-
   <!-- CAMPAMENTOS -->
   <section id="campamentos">
     <h2>Campamentos de Verano</h2>
     <div class="grid">
       <div class="card">
         <h3>Urbanos (7-12 años)</h3>
-        <p>100% en inglés. Refuerzo de asignaturas bilingües (ciencias naturales y sociales) y actividades colectivas de tiempo libre.</p>
+        <p>100% en inglés. Refuerzo de asignaturas bilingües y actividades colectivas de tiempo libre.</p>
+        <img src="images/campamento_urbano.jpg" alt="Campamento urbano en inglés">
       </div>
       <div class="card">
         <h3>En el Extranjero (12-17 años)</h3>
-        <p>Aprendizaje del idioma en un ambiente de inmersión lingüística total, con desarrollo de la comprensión oral y escrita diaria.</p>
+        <p>Aprendizaje en un ambiente de inmersión total con comprensión oral y escrita diaria.</p>
+        <img src="images/campamento_extranjero.jpg" alt="Campamento en el extranjero">
       </div>
     </div>
   </section>
@@ -318,3 +316,4 @@
   </footer>
 </body>
 </html>
+
