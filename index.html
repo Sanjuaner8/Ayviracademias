@@ -43,9 +43,11 @@
 
     /* ===== NAV ===== */
     nav {
+      background-color: #9b59b6;
+    }
+    .nav-container {
       display: flex;
       justify-content: center;
-      background-color: #9b59b6;
       flex-wrap: wrap;
     }
     nav a {
@@ -58,36 +60,33 @@
     nav a:hover {
       background-color: rgba(155, 89, 182, 0.8);
     }
+    .hamburger {
+      display: none;
+      font-size: 1.5rem;
+      color: white;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 12px 16px;
+    }
 
-    /* ===== SECCIONES ===== */
-    section {
-      padding: 50px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-    section:nth-child(even) {
-      background-color: #faf6fc;
-    }
-    section:nth-child(odd) {
-      background-color: #ffffff;
-    }
-    h2 {
-      color: #8e44ad;
-      margin-bottom: 20px;
-      font-size: 1.8rem;
+    /* ===== TITULOS DE SECCIONES ===== */
+    h2.section-title {
+      background-color: #9b59b6;
+      color: white;
+      padding: 12px;
+      margin: 0 0 30px 0;
       text-align: center;
-    }
-    h3 {
-      color: #27ae60;
-      margin-bottom: 10px;
-    }
-    p strong {
-      color: #8e44ad;
+      font-size: 1.6rem;
     }
 
     /* ===== MÉTODO ===== */
-    .metodo-text {
+    #metodo {
+      background-color: #f3eaf7;
+      padding: 40px 20px;
       text-align: center;
+    }
+    .metodo-text {
       max-width: 800px;
       margin: auto;
       font-size: 1.1rem;
@@ -103,11 +102,30 @@
       font-size: 1.2rem;
     }
 
+    /* ===== SECCIONES ===== */
+    section {
+      padding: 50px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h3 {
+      color: #27ae60;
+      margin-bottom: 10px;
+    }
+    p strong {
+      color: #8e44ad;
+    }
+
     /* ===== GRID ===== */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
+    }
+    .grid-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .grid-auto {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
     .card {
       border: 1px solid #eee;
@@ -116,15 +134,16 @@
       background: #fff;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
       transition: transform 0.2s;
+      text-align: center;
     }
     .card:hover {
       transform: translateY(-5px);
     }
     .card img {
       max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 15px auto 0;
+      height: 200px;
+      object-fit: cover;
+      margin-bottom: 15px;
       border-radius: 10px;
     }
 
@@ -147,17 +166,19 @@
     }
 
     /* ===== RESPONSIVE ===== */
-    @media (max-width: 600px) {
-      header {
+    @media (max-width: 768px) {
+      .nav-container {
+        display: none;
         flex-direction: column;
-        text-align: center;
       }
-      header img {
-        margin: 0 0 10px;
+      .nav-container.active {
+        display: flex;
       }
-      nav a {
-        flex: 1 1 100%;
-        text-align: center;
+      .hamburger {
+        display: block;
+      }
+      .grid-2 {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -174,17 +195,19 @@
 
   <!-- NAV -->
   <nav>
-    <a href="#metodo">Método</a>
-    <a href="#idiomas">Idiomas</a>
-    <a href="#cursos">Cursos</a>
-    <a href="#examenes">Exámenes Oficiales</a>
-    <a href="#campamentos">Campamentos</a>
-    <a href="#contacto">Contacto</a>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <div class="nav-container" id="navMenu">
+      <a href="#metodo">Método</a>
+      <a href="#idiomas">Idiomas</a>
+      <a href="#cursos">Cursos</a>
+      <a href="#examenes">Exámenes Oficiales</a>
+      <a href="#campamentos">Campamentos</a>
+      <a href="#contacto">Contacto</a>
+    </div>
   </nav>
 
   <!-- MÉTODO -->
   <section id="metodo">
-    <h2>El Método Ayvir</h2>
     <p class="metodo-text">
       <span class="metodo-highlight">EL MÉTODO AYVIR</span> consigue que nuestros alumnos se sientan <span>motivados desde el primer día</span>.<br>
       Desarrollan <span>capacidades creativas</span> con las que aprenden con <strong>seguridad</strong> el idioma de su elección.<br>
@@ -194,75 +217,75 @@
 
   <!-- IDIOMAS -->
   <section id="idiomas">
-    <h2>Idiomas</h2>
+    <h2 class="section-title">Idiomas</h2>
     <p style="text-align:center; opacity:0.9;">
       <strong>Clases ONLINE</strong> flexibles para todas las edades: desde infantil hasta adultos.
     </p>
-    <div class="grid">
+    <div class="grid grid-2">
       <div class="card">
+        <img src="images/ingles.jpg" alt="Clase de inglés online">
         <h3>Inglés</h3>
         <p>Clases individuales y grupales para todos los niveles, adaptadas a tu horario.</p>
-        <img src="images/ingles.jpg" alt="Clase de inglés online">
       </div>
       <div class="card">
+        <img src="images/espanol.jpg" alt="Clase de español online">
         <h3>Español</h3>
         <p>Aprende español de manera divertida, desde nivel infantil hasta adultos.</p>
-        <img src="images/espanol.jpg" alt="Clase de español online">
       </div>
       <div class="card">
+        <img src="images/aleman.jpg" alt="Clase de alemán online">
         <h3>Alemán</h3>
         <p>Curso online intensivo y regular para todos los niveles y edades.</p>
-        <img src="images/aleman.jpg" alt="Clase de alemán online">
       </div>
       <div class="card">
+        <img src="images/frances.jpg" alt="Clase de francés online">
         <h3>Francés</h3>
         <p>Clases online adaptadas a tus necesidades, individuales y grupales.</p>
-        <img src="images/frances.jpg" alt="Clase de francés online">
       </div>
     </div>
   </section>
 
   <!-- CURSOS -->
   <section id="cursos">
-    <h2>Cursos</h2>
+    <h2 class="section-title">Cursos</h2>
     <p style="text-align:center; opacity:0.9;">
       Ofrecemos <strong>clases particulares</strong> y <strong>grupales</strong> para todas las edades y necesidades.
     </p>
-    <div class="grid">
+    <div class="grid grid-2">
       <div class="card">
-        <h3>Clases Particulares</h3>
         <img src="images/particulares.jpg" alt="Clases particulares">
+        <h3>Clases Particulares</h3>
       </div>
       <div class="card">
-        <h3>Clases Grupales</h3>
         <img src="images/grupales.jpg" alt="Clases grupales">
+        <h3>Clases Grupales</h3>
       </div>
     </div>
 
-    <div class="grid" style="margin-top:30px;">
+    <div class="grid grid-2" style="margin-top:30px;">
       <div class="card">
+        <img src="images/ninos_adolescentes.jpg" alt="Clases para niños y adolescentes">
         <h3>Niños y Adolescentes</h3>
         <p>Desarrollan interés y competencias orales y escritas en grupos reducidos o tutorías individuales.</p>
-        <img src="images/ninos_adolescentes.jpg" alt="Clases para niños y adolescentes">
       </div>
       <div class="card">
+        <img src="images/adultos.jpg" alt="Clases para adultos">
         <h3>Adultos</h3>
         <p>Cursos generales e intensivos en todos los niveles. También programas de inmersión en España.</p>
-        <img src="images/adultos.jpg" alt="Clases para adultos">
       </div>
       <div class="card">
+        <img src="images/empresas_colegios.jpg" alt="Cursos para empresas y colegios">
         <h3>Empresas y Colegios</h3>
         <p>Programas especializados y personalizados con un <strong>altísimo porcentaje de éxito en exámenes oficiales</strong>.  
         Adaptados a calendario académico o necesidades corporativas.</p>
-        <img src="images/empresas_colegios.jpg" alt="Cursos para empresas y colegios">
       </div>
     </div>
   </section>
 
   <!-- EXÁMENES -->
   <section id="examenes">
-    <h2>Exámenes Oficiales</h2>
-    <div class="grid">
+    <h2 class="section-title">Exámenes Oficiales</h2>
+    <div class="grid grid-2">
       <div class="card">
         <h3>Cambridge English</h3>
         <ul>
@@ -286,24 +309,24 @@
 
   <!-- CAMPAMENTOS -->
   <section id="campamentos">
-    <h2>Campamentos de Verano</h2>
-    <div class="grid">
+    <h2 class="section-title">Campamentos de Verano</h2>
+    <div class="grid grid-2">
       <div class="card">
+        <img src="images/campamento_urbano.jpg" alt="Campamento urbano en inglés">
         <h3>Urbanos (7-12 años)</h3>
         <p>100% en inglés. Refuerzo de asignaturas bilingües y actividades colectivas de tiempo libre.</p>
-        <img src="images/campamento_urbano.jpg" alt="Campamento urbano en inglés">
       </div>
       <div class="card">
+        <img src="images/campamento_extranjero.jpg" alt="Campamento en el extranjero">
         <h3>En el Extranjero (12-17 años)</h3>
         <p>Aprendizaje en un ambiente de inmersión total con comprensión oral y escrita diaria.</p>
-        <img src="images/campamento_extranjero.jpg" alt="Campamento en el extranjero">
       </div>
     </div>
   </section>
 
   <!-- CONTACTO -->
   <section id="contacto">
-    <h2>Contacto</h2>
+    <h2 class="section-title">Contacto</h2>
     <p class="contact-info">Teléfono: <a href="tel:630464497">630 464 497</a></p>
     <p class="contact-info">Email: <a href="mailto:ayviracademias@gmail.com">ayviracademias@gmail.com</a></p>
     <img src="images/logo.jpg" alt="Logo pequeño AyvirAcademias" style="max-height:40px; display:block; margin:15px auto;">
@@ -314,6 +337,12 @@
     <p>&copy; 2025 AyvirAcademias. Todos los derechos reservados.</p>
     <img src="images/logo.jpg" alt="Logo AyvirAcademias pequeño">
   </footer>
+
+  <!-- SCRIPT MENU -->
+  <script>
+    function toggleMenu() {
+      document.getElementById("navMenu").classList.toggle("active");
+    }
+  </script>
 </body>
 </html>
-
