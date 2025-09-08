@@ -13,6 +13,7 @@
       background-color: #ffffff;
       color: #333;
     }
+
     /* ===== HEADER ===== */
     header {
       background-color: #fff;
@@ -20,20 +21,21 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 20px 40px;
+      padding: 15px 20px;
       text-align: left;
+      flex-wrap: wrap;
     }
     header img {
-      max-height: 90px;
-      margin-right: 20px;
+      max-height: 70px;
+      margin-right: 15px;
     }
     header .title-block h1 {
       margin: 0;
-      font-size: 2.2rem;
+      font-size: 1.8rem;
       color: #8e44ad;
     }
     header .title-block p {
-      font-size: 1.3rem;
+      font-size: 1rem;
       margin: 5px 0 0;
       color: #8e44ad;
       font-weight: bold;
@@ -41,35 +43,37 @@
     header .title-block span {
       text-transform: uppercase;
       font-weight: bold;
-      opacity: 0.8; /* transparencia */
+      opacity: 0.8;
     }
+
     /* ===== NAV ===== */
     nav {
       display: flex;
       justify-content: center;
-      background-color: #9b59b6; /* malva más claro */
+      background-color: #9b59b6;
       flex-wrap: wrap;
     }
     nav a {
       color: white;
-      padding: 14px 20px;
+      padding: 12px 16px;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1rem;
+      font-size: 0.95rem;
     }
     nav a:hover {
       background-color: rgba(155, 89, 182, 0.8);
     }
+
     /* ===== SECCIONES ===== */
     section {
-      padding: 50px 20px;
+      padding: 40px 15px;
       max-width: 1100px;
       margin: auto;
     }
     h2 {
       color: #8e44ad;
-      margin-bottom: 25px;
-      font-size: 1.8rem;
+      margin-bottom: 20px;
+      font-size: 1.6rem;
       text-align: center;
     }
     h3 {
@@ -79,15 +83,16 @@
     p strong {
       color: #8e44ad;
     }
+
     /* ===== GRID ===== */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-      gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
     }
     .card {
       border: 1px solid #eee;
-      padding: 20px;
+      padding: 15px;
       border-radius: 12px;
       background: #fff;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
@@ -97,11 +102,13 @@
       transform: translateY(-5px);
     }
     .card img {
-      max-width: 80%;
+      max-width: 100%;
+      height: auto;
       display: block;
       margin: 15px auto 0;
       border-radius: 10px;
     }
+
     /* ===== FOOTER ===== */
     footer {
       text-align: center;
@@ -110,13 +117,29 @@
       color: white;
     }
     footer img {
-      max-height: 40px;
+      max-height: 25px;
       display: block;
       margin: 10px auto;
     }
+
     .contact-info {
-      font-size: 18px;
+      font-size: 16px;
       text-align: center;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      header img {
+        margin: 0 0 10px;
+      }
+      nav a {
+        flex: 1 1 100%;
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -132,6 +155,7 @@
 
   <!-- NAV -->
   <nav>
+    <a href="#metodo">Método</a>
     <a href="#cursos">Cursos</a>
     <a href="#examenes">Exámenes Oficiales</a>
     <a href="#ninos">Niños y Adolescentes</a>
@@ -141,10 +165,23 @@
     <a href="#contacto">Contacto</a>
   </nav>
 
+  <!-- MÉTODO -->
+  <section id="metodo">
+    <h2>El Método Ayvir</h2>
+    <p style="text-align:center; max-width:800px; margin:auto; opacity:0.9;">
+      <strong>EL MÉTODO AYVIR</strong> consigue que nuestros alumnos se sientan motivados desde el primer día:
+      Desarrollan capacidades creativas con las que aprenden con seguridad el idioma de su elección.
+      Enseñanza mediante técnicas de razonamiento basadas en la lógica, más allá de las habituales reglas
+      gramaticales y de memorización.
+    </p>
+  </section>
+
   <!-- CURSOS -->
   <section id="cursos">
     <h2>Cursos</h2>
-    <p style="text-align:center; opacity:0.9;"><strong>Clases ONLINE</strong> flexibles para todas las edades: desde infantil hasta adultos.</p>
+    <p style="text-align:center; opacity:0.9;">
+      <strong>Clases ONLINE</strong> flexibles para todas las edades: desde infantil hasta adultos.
+    </p>
     <div class="grid">
       <div class="card">
         <h3>Inglés</h3>
@@ -270,8 +307,8 @@
   <section id="contacto">
     <h2>Contacto</h2>
     <p class="contact-info">Teléfono: <a href="tel:630464497">630 464 497</a></p>
-    <p class="contact-info">Email: info@ayviracademias.com</p>
-    <img src="images/logo.jpg" alt="Logo pequeño AyvirAcademias">
+    <p class="contact-info">Email: <a href="mailto:ayviracademias@gmail.com">ayviracademias@gmail.com</a></p>
+    <img src="images/logo.jpg" alt="Logo pequeño AyvirAcademias" style="max-height:40px; display:block; margin:15px auto;">
   </section>
 
   <!-- FOOTER -->
